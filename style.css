@@ -20,6 +20,8 @@
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+        0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 
@@ -51,9 +53,11 @@ img{
 /* strong{font-weight: var(--fw-bold)} */
 /* Typography */
 section{
-    padding:4rem 2rem;
+    padding:5rem 2rem;
 }
-
+.intro-image{
+    box-shadow: (--bs);
+}
 
 h1,
 h2,
@@ -87,16 +91,45 @@ h3{font-size: var(--fs-h3)}
 .section-subtitle-intro,
 .section-subtitle-aboutme{
     background:var(--clr-accent);
+    padding:.25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom:1rem;
 }
-/* #navigations{
-    display:none; */
-/* } */
-nav{
-    display: none;
+#navigations{
+    display:none;
+}
+@media (min-width:600px){
+    .Intro{
+        display: grid;
+        width:min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "img title"
+            "img subtitle";
+            grid-template-columns: min-content max-content;
+    }
+    #intro-image{
+        grid-area:img;
+        min-width: 250px;
+        position: relative;
+    }
+    .section-subtitle-intro{
+        align-self: start;
+        grid-column:-1/1;
+        grid-row: 2;
+        position: relative;
+        left:-1.5em;
+        z-index: -1;
+        text-align: right;
+        width: calc(100% + 1.5em);
+    }
 }
 
-.Intro{
-    position: relative;
+/* what i do section */
+.my-service{
+    background-image: url(../Portfolio/Images/services-bg.jpg);
+    background-size: cover;
+    color: (--clr-light);
+    text-align:right;
 }
