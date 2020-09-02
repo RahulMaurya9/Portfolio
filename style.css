@@ -49,8 +49,26 @@ img{
     display:block;
     max-width: 100%;
 }
-
-/* strong{font-weight: var(--fw-bold)} */
+.btns{
+    padding:.53em 2.5em;
+    display:inline-block;
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    cursor: pointer;
+    margin:auto;
+    text-decoration: none;
+    border-radius: 1px 1px 1px 1px;
+    font-size:.9em;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+.btns:hover{
+    transform : scale(1.1);
+    background:var(--clr-light);
+    color:var(--clr-accent)
+}
 /* Typography */
 section{
     padding:5rem 2rem;
@@ -77,6 +95,7 @@ h3{font-size: var(--fs-h3)}
 
 .intro-name{
     font-weight: var(--fw-reg);
+    font-size: 3em;
 
 }
 .intro-name strong{
@@ -130,6 +149,102 @@ h3{font-size: var(--fs-h3)}
 .my-service{
     background-image: url(../Portfolio/Images/services-bg.jpg);
     background-size: cover;
-    color: (--clr-light);
+    color: white;
     text-align:right;
+    background-color: var(--clr-dark);
+    text-align: center;
+
+}
+.service-heading{
+    position: relative;
+    color:var(--clr-accent);
+}
+
+.service-heading::after{
+    content:'';
+    display: block;
+    width: 2.3em;
+    height: 2px;
+    background: rgb(189, 186, 186);
+    margin: 0.5em auto 1em;
+    opacity: .67;
+}
+.service-lists{
+    max-width: 500px;
+    margin:0 auto;
+}
+
+.service-section{
+    margin-bottom: 3em;
+}
+
+
+@media (min-width:800px){
+    .service-section{
+        display: flex;
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .service-lists + .service-lists {
+        margin-left: 2em;
+    }
+}
+
+/* Who I AM */
+
+.about-me{
+    min-width: 1000px;
+    margin : 0 auto;
+}
+
+.about-me img{
+    box-shadow: var(--bs);
+}
+
+@media (min-width:600px){
+    .about-me{
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas:
+            "title img"
+            "title img"
+            "subtitle img"
+            "text img";
+            grid-column-gap: 2em;
+    }
+    .section-title-aboutme{
+        grid-area: title;
+        text-align: center;
+    }
+    .section-title-aboutme::after{
+        content:'';
+        display: block;
+        width: 2.3em;
+        height: 2px;
+        background: rgb(189, 186, 186);
+        margin: 0.2em auto 1.5em;
+        opacity: .67;
+    }
+    .section-subtitle-aboutme{
+        grid-column: 1/-1;
+        grid-row:2;
+        position: relative;
+        left:-1em;
+        width:calc(100% + 2em);
+        padding-left: 1em ;
+        padding-right: calc(100% +4em);
+    }
+    .about-me img{
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
+/* my work */
+
+.my-work{
+    background: var(--clr-dark);
+    color : white;
+    text-align: center;
 }
