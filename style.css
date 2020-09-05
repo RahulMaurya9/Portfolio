@@ -248,3 +248,9 @@ h3{font-size: var(--fs-h3)}
     color : white;
     text-align: center;
 }
+
+
+
+footer{
+    background-color: black;
+}
