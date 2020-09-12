@@ -92,14 +92,20 @@ h3{font-size: var(--fs-h3)}
 .section-title{
     margin-bottom: .25rem;
 }
-
+.Intro{
+    position: relative;
+}
 .intro-name{
     font-weight: var(--fw-reg);
-    font-size: 3em;
-
+    font-size: 4em;
+}
+.move-text{
+    position: relative;
+    left: -100px;
 }
 .intro-name strong{
     display:block;
+    font-size: 1em;
     font-weight: var(--fw-bold);
 }
 .section-subtitle{
@@ -110,12 +116,12 @@ h3{font-size: var(--fs-h3)}
 .section-subtitle-intro,
 .section-subtitle-aboutme{
     background:var(--clr-accent);
+    text-transform: uppercase;
+    color:yellow;
     padding:.25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom:1rem;
-}
-#navigations{
-    display:none;
+    font-weight: bold;
 }
 @media (min-width:600px){
     .Intro{
@@ -132,6 +138,7 @@ h3{font-size: var(--fs-h3)}
         grid-area:img;
         min-width: 250px;
         position: relative;
+        box-shadow: var(--bs);
     }
     .section-subtitle-intro{
         align-self: start;
@@ -144,6 +151,81 @@ h3{font-size: var(--fs-h3)}
         width: calc(100% + 1.5em);
     }
 }
+/* navigation */
+.alias-logo{
+    width: 2em;
+    height: 3px;
+    background: #000;
+    display: block;
+    border-radius: 1em;
+    position: relative;
+
+}
+
+
+
+#navigations{display: none;}
+
+.logo{
+    max-width: 12em;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding:1em;
+}
+#navigations{
+    background: #000;
+    position: fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    color:red;
+    z-index: 100;
+    transform:  translateX(80%);
+    transition: transform 250ms  cubic-bezier(.5 ,0,.5,1);
+
+}
+.nav-item{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+    color : yellow;
+    align-items: left;
+    padding: 0;
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+
+    
+}
+.nav-items{
+    margin-left: 5%;
+}
+.nav-items:hover{
+    text-decoration: underline;
+    color : white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* what i do section */
 .my-service{
@@ -178,7 +260,6 @@ h3{font-size: var(--fs-h3)}
     margin-bottom: 3em;
 }
 
-
 @media (min-width:800px){
     .service-section{
         display: flex;
@@ -204,7 +285,8 @@ h3{font-size: var(--fs-h3)}
 
 @media (min-width:600px){
     .about-me{
-        width: 900px;
+        width: 1000px;
+        font-size: 1.2em;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 200px;
@@ -245,14 +327,16 @@ h3{font-size: var(--fs-h3)}
 }
 /* my work */
 
-/* .my-work{
+.my-work{
     background: var(--clr-dark);
     color : white;
     text-align: center;
 }
 
- */
-
+.fa-exclamation-triangle{
+    font-size: 3.7em;
+    color:yellow;
+}
 footer{
     background:#111;
     font-size:var(--fs-h3);
