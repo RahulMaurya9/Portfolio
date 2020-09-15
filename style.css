@@ -35,6 +35,9 @@
 }
 
 /* Gerneral Styles */
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background: var(--clr-light);
@@ -151,20 +154,38 @@ h3{font-size: var(--fs-h3)}
         width: calc(100% + 1.5em);
     }
 }
-/* navigation */
-.alias-logo{
-    width: 2em;
-    height: 3px;
-    background: #000;
-    display: block;
-    border-radius: 1em;
+
+.btn-style{
     position: relative;
-
+    left : 96%;
+    top : -49px;
+    width: 3em;
+    height: 1em;
+    background: transparent;
+    padding :.5em;
+    right: 1em;
+    z-index: 1000;
+    /* border: 2px solid white; */
 }
-
-
-
-#navigations{display: none;}
+.nav-open .nav{
+    transform: translateX(100);
+    visibility: visible;
+}
+.nav-open .alias-logo .btn-style{
+    position:fixed;
+}
+.nav-open .alias-logo{
+    transform: rotate(.635turn);
+    background: white;
+}
+.nav-open .alias-logo::after{
+    transform: rotate(90deg) translateX(-6px);
+    background: white;
+}
+.nav-open .alias-logo::before{
+    background:yellow;
+}
+.nav{visibility: hidden;}
 
 .logo{
     max-width: 12em;
@@ -174,7 +195,7 @@ header{
     justify-content: space-between;
     padding:1em;
 }
-#navigations{
+.nav{
     background: #000;
     position: fixed;
     top:0;
@@ -212,7 +233,34 @@ header{
 }
 
 
+/*TODO : ALIAS LOGO*/
 
+.alias-logo{
+    
+    display: block;
+    position: relative;
+}
+.alias-logo,
+.alias-logo::after,
+.alias-logo::before{
+    width: 2em;
+    height: 2.3px;
+    background: var(--clr-dark);
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+    
+}
+
+.alias-logo::after,
+.alias-logo::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.alias-logo::after{top:4px;}
+.alias-logo::before{bottom: 4px;}
 
 
 
@@ -374,3 +422,25 @@ footer a{
 }
 
 
+.telegram{
+    display: block;
+}
+.telegram:hover{
+    color:#1da1f2;
+}
+.twitter:hover{
+    color:#1da1f2;
+}
+.instagram:hover{
+    color:#c32aa3;
+}
+.linkedin:hover{
+    color:#007bb5;
+}
+.github:hover{
+    color:#333;
+}
+
+.footer-link:hover{
+    color:	#c71610;
+}
