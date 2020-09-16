@@ -126,6 +126,34 @@ h3{font-size: var(--fs-h3)}
     margin-bottom:1rem;
     font-weight: bold;
 }
+
+/* TODO : MOBILE VIEW */
+@media (max-width:600px){
+    .move-text{
+        position: relative;
+        top:0;
+        bottom: 0;
+        left: 0px;
+    }
+    .alias-logo{
+        position: relative;
+        top:2em;
+        bottom: 0;
+        right: 2em;
+    }
+    button{
+        position: relative;
+        top:2em;
+        left: 2em;
+        border: 2px solid green;
+        background-color:black;
+    }
+    .nav-open .nav{
+        transform: translateX(0);
+    }
+}
+
+
 @media (min-width:600px){
     .Intro{
         display: grid;
@@ -165,13 +193,14 @@ h3{font-size: var(--fs-h3)}
     padding :.5em;
     right: 1em;
     z-index: 1000;
-    /* border: 2px solid white; */
+    /* border: 2px solid blue; */
+    /* z-index: 100000; */
 }
 .nav-open .nav{
     transform: translateX(100);
     visibility: visible;
 }
-.nav-open .alias-logo .btn-style{
+.nav-open .alias-logo{
     position:fixed;
 }
 .nav-open .alias-logo{
@@ -261,19 +290,6 @@ header{
 
 .alias-logo::after{top:4px;}
 .alias-logo::before{bottom: 4px;}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* what i do section */
 .my-service{
@@ -373,7 +389,7 @@ header{
         z-index: 2;
     }
 }
-/* my work */
+/* TODO: my work */
 
 .my-work{
     background: var(--clr-dark);
@@ -385,6 +401,8 @@ header{
     font-size: 3.7em;
     color:yellow;
 }
+
+/* TODO : FOOTER WORK */
 footer{
     background:#111;
     font-size:var(--fs-h3);
@@ -427,12 +445,15 @@ footer a{
 }
 .telegram:hover{
     color:#1da1f2;
+    /* transform: scale(1.1); */
 }
 .twitter:hover{
     color:#1da1f2;
 }
 .instagram:hover{
     color:#c32aa3;
+    transform: scale(1.1);
+
 }
 .linkedin:hover{
     color:#007bb5;
@@ -443,4 +464,25 @@ footer a{
 
 .footer-link:hover{
     color:	#c71610;
+}
+
+.Top{
+    display: inline-block;
+    position: relative;
+    left: 15em;
+    font-weight: bold;
+    color : rgb(223, 213, 213);
+}
+.Top:hover,
+.top-icon:hover{
+    color:white;
+    visibility: visible;
+
+}
+
+.top-icon{
+    display:inline-block;
+    position: relative;
+    left: 15.5em;
+    top: 2px;
 }
