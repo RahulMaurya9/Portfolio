@@ -5,8 +5,8 @@
 }
 
 :root{
-    --ff-primaryy : "Source Sans Pro", sans-serif;
-    --ff-secondary : "Source Sans Pro" monospace;
+    --ff-primaryy : 'Lora', serif;
+    --ff-secondary : 'Roboto Slab', serif;
 
     --fw-reg : 300;
     --fw-bold: 900;
@@ -110,6 +110,7 @@ h3{font-size: var(--fs-h3)}
     display:block;
     font-size: 1em;
     font-weight: var(--fw-bold);
+    color:#17252A;
 }
 .section-subtitle{
     margin:0;
